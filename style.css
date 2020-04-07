@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url(hawaii2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 nav{
     display: flex;
     justify-content: space-around;
@@ -45,15 +51,17 @@ nav{
 
 .burger div {
     width: 25px;
-    height: 5px;
+    height: 3px;
     background-color: rgb(241, 239, 239);
     margin: 5px;
+    transition: all 0.3s ease;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width: 1024px){  /*max-width: 768px       */
     .nav-links{
         width: 60%;
     }
+}
 
 @media screen and (max-width:768px){
         body{
@@ -84,7 +92,7 @@ nav{
     transform: translateX(0%);
 }
 
-@keyframes navLinksFade {
+@keyframes navLinkFade {
     from {
         opacity: 0;
         transform: translateX(50px);
@@ -94,3 +102,15 @@ nav{
         transform: translateX(0px);
     }
 }
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
